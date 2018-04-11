@@ -1,0 +1,192 @@
+#platzmacher{
+	height: 2000px
+}
+
+/*komplette Dokument*/
+	html, body{
+		font-family: "open sans", sans-serif;
+		margin: 0;
+		height: 100%;
+	}
+
+/*1. Site*/
+	header{
+		height: 100%;
+		width:100%;
+		background-image: url(bilder/Hintergrund.jpeg);
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		position: relative;
+		overflow: hidden;
+	}
+
+/*Logo*/
+
+/*Schriftzug*/
+	h1#danielmaurer{
+		font-size: 60px;
+		font-weight: 700;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 10px;
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		margin: 0;
+		top: 50%;
+	}
+
+	h1#danielmaurer span{
+		display: inline-block;
+		border: solid white 5px;
+		border-radius: 5px;
+		padding: 10px 5px;
+		background-color: rgba(245,245,245,0.5);
+	}
+
+	/*Start Knopf*/
+	#startknopf{
+		font-size: 30px;
+		font-weight: 500;
+		letter-spacing: 4px;
+		text-decoration: none;
+		color: white;
+		border: solid white 3px;
+		border-radius: 5px;
+
+	}
+
+/*Navigations Menü*/
+	nav#menü{
+		min-width: 35%;
+		height: 40px;
+		float: right;
+		
+	}
+	nav#menü ul{
+		margin: 0;
+		padding: 0;
+		min-width: 300px;
+		height:40px;
+		background-color: rgba(165,165,165,0.7);
+		border-radius: 5px;
+
+
+	}
+	nav#menü li{
+		float: right;
+		padding: 0 10px 5px 10px;
+		margin-top: 5px;
+		list-style: none;
+		border-right: solid 1px white;
+
+	}
+
+	
+		
+	
+	nav#menü a{
+		text-decoration: none;
+		color: white;
+		font-size: 25px;
+
+	}
+	nav#menü a:hover{
+		color: rgba(71,80,244,0.8);
+	}
+
+	@media screen and (max-width: 600px){
+		#kleinsmenü{
+			text-align: center;
+			font-size: 30px;
+
+		}
+		nav#menü{
+			float: none;
+			
+			width: auto;
+			height: auto;
+		}
+		nav#menü ul{
+			width: auto;
+			height: auto;
+
+		}
+
+
+		nav#menü li{
+			float: none;
+			margin: 0;
+			padding-top: 5px;
+			border-bottom: 1px solid white;
+		}
+		nav#menü a{
+			padding: 10px 5px;
+
+
+		}
+	}
+
+
+/*Über Mich Section 1*/
+	#übermich{
+		text-align: center;
+		padding: 50px 0;
+		background-image: url();
+		background-size: cover;
+		background-attachment: fixed;
+		margin-bottom: ;
+	}
+	#übermich h2{
+		font-size: 40px;
+		font-weight: 500;
+		letter-spacing: 5px;
+
+	}
+
+	/*Avatar Bild*/
+	#avatar{
+		width: 20%;
+		height: auto;
+		margin-left:  40%;
+	}
+
+	#avatar img{
+		width: 100%;
+		height: 100%;
+
+
+	}
+	/*Über Mich Text*/
+
+	#übermich p{
+		margin-top: 20px;
+		width: 60%;
+		height: auto;
+		border-left: solid black 1px;
+		border-right: solid black 1px;
+	}
+
+/*Gallerie Section 2*/
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
