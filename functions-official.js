@@ -33,9 +33,8 @@ $("document").ready(function(){
 
 
 //Menü wenn screen klei
-  $('#kleinsmenü').click(function(){
-    $('#menü').slideToggle();
-  })//end click function
+ 
+ 
 
 
 
