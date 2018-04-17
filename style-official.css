@@ -7,6 +7,7 @@
 		font-family: "open sans", sans-serif;
 		margin: 0;
 		height: 100%;
+	
 	}
 
 /*1. Site*/
@@ -19,9 +20,8 @@
 		background-attachment: fixed;
 		position: relative;
 		overflow: hidden;
+		
 	}
-
-/*Logo*/
 
 /*Schriftzug*/
 	h1#danielmaurer{
@@ -34,7 +34,9 @@
 		position: absolute;
 		width: 100%;
 		margin: 0;
-		top: 50%;
+		top: 35%;
+
+		
 	}
 
 	h1#danielmaurer span{
@@ -43,10 +45,17 @@
 		border-radius: 5px;
 		padding: 10px 5px;
 		background-color: rgba(245,245,245,0.5);
+		box-shadow: 5px 5px 15px black;
+		text-shadow:5px 5px 15px black;
 	}
 
 	/*Start Knopf*/
 	#startknopf{
+		margin: 0;
+
+	}
+
+	#startknopf a{
 		font-size: 30px;
 		font-weight: 500;
 		letter-spacing: 4px;
@@ -54,108 +63,273 @@
 		color: white;
 		border: solid white 3px;
 		border-radius: 5px;
-
+		text-shadow:5px 5px 8px black;
+		box-shadow: 5px 5px 8px black;
 	}
 
 /*Navigations Menü*/
-	#menü{
-		height: 50px;
-		
-		
-		
+	.button_container {
+		position: fixed;
+	 	top: 5%;
+	  	right: 2%;
+	  	height: 27px;
+	  	width: 35px;
+	  	cursor: pointer;
+	  	z-index: 100;
+	  	transition: opacity .25s ease;
+	}
+	.button_container:hover {
+	  	opacity: .7;
+	}
+	.button_container.active .top {
+	  	transform: translateY(11px) translateX(0) rotate(45deg);
+	  	background: #FFF;
+	}
+	.button_container.active .middle {
+	  	opacity: 0;
+	  	background: #fff;
+	}
+	.button_container.active .bottom {
+	  	transform: translateY(-11px) translateX(0) rotate(-45deg);
+	  	background: #FFF;
+	}
+	.button_container span {
+	  	background: #fff;
+	  	border: none;
+	  	height: 5px;
+	  	width: 100%;
+	  	position: absolute;
+	  	top: 0;
+	  	left: 0;
+	  	transition: all .35s ease;
+	  	cursor: pointer;
+	}
+	.button_container span:nth-of-type(2) {
+	  	top: 11px;
+	}
+	.button_container span:nth-of-type(3) {
+	  	top: 22px;
+	}
+
+	.overlay {
+	  	position: fixed;
+	  	background-image: url(bilder/navigationshintergrund.jpg);
+	  	background-size: cover;
+	  	top: 0;
+	  	left: 0;
+	  	width: 100%;
+	  	height: 0%;
+	  	opacity: 0;
+	  	visibility: hidden;
+	  	transition: opacity .35s, visibility .35s, height .35s;
+	  	overflow: hidden;
+	}
+	.overlay.open {
+	  	opacity: 1;
+	  	visibility: visible;
+	  	height: 100%;
+	}
+	.overlay.open li {
+	  	animation: fadeInRight .5s ease forwards;
+	  	animation-delay: .35s;
+	}
+	.overlay.open li:nth-of-type(2) {
+	  	animation-delay: .4s;
+	}
+	.overlay.open li:nth-of-type(3) {
+	  	animation-delay: .45s;
+	}
+	.overlay.open li:nth-of-type(4) {
+	  	animation-delay: .50s;
+	}
+	.overlay nav {
+	  	position: relative;
+	  	height: 70%;
+	  	top: 50%;
+	  	transform: translateY(-50%);
+	  	font-size: 50px;
+	  	font-family: 'Varela Round', serif;
+	  	font-weight: 400;
+	  	text-align: center;
+	}
+	.overlay ul {
+	  	list-style: none;
+	  	padding: 0;
+	  	margin: 0 auto;
+	  	display: inline-block;
+	  	position: relative;
+	  	height: 100%;
+	}
+	.overlay ul li {
+	  	display: block;
+	  	height: 25%;
+	  	height: calc(100% / 4);
+	  	min-height: 50px;
+	  	position: relative;
+	 	opacity: 0;
+	 	width: 200px;
+	}
+	.overlay ul li a {
+	  	display: block;
+	  	position: relative;
+	  	color: #FFF;
+	  	text-decoration: none;
+	  	overflow: hidden;
+	  	text-shadow: 5px 5px 10px black;
 
 	}
-	#menü ul{
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		text-align: center;
-		
+	.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+	  	width: 100%;
 	}
-	#menü li{
-		display: inline-block;
-		margin: 0 5px;
-		background-color: rgba(0,0,0,0.7);
-		border-radius: 0 0 10px 10px;
-	}
-	#menü li:hover{
-		opacity: 0.8
-	}
-	#menü a{
-		text-decoration: none;
-		text-transform: none;
-		font-size: 30px;
-		color: white;
-		opacity: 0.8;
-		line-height: 50px;
-		padding: 10px 40px 9px 40px;
+	.overlay ul li a:after {
+	  	content: '';
+	  	position: absolute;
+	  	bottom: 0;
+	  	left: 50%;
+	  	width: 0%;
+	  	transform: translateX(-50%);
+	  	height: 3px;
+	  	background: #FFF;
+	  	transition: .35s;
 	}
 
-	@media screen and (max-width: 800px){
-		#menü{
-			height: 200px;
-			text-align: center;
-			position: relative;
-			
-		}
-		#menü ul{
-			text-align: center;
-			
-			display: grid;
-			grid-template-columns: 185px 185px;
-  			grid-gap: 10px;
-			margin-left: 20.9%;
-
-			 
-		}
-		#menü li{
-			
-			margin: 5px 0;
-			border-radius: 5px;
-		}
-		
+	@keyframes fadeInRight {
+	  	0% {
+	    	opacity: 0;
+	    	left: 20%;
+	  	}
+	  	100% {
+	    	opacity: 1;
+	    	left: 0;
+	  	}
 	}
+
 /*Über Mich Section 1*/
-	#ubermich{
+	
+
+	.übermich{/*s ganze*/
+		width: 100%;
+		min-height: 1500px;
 		text-align: center;
-		padding: 50px 0;
-		background-image: url();
+		background-image: url(bilder/hintergrund-übermichhm.jpeg);
 		background-size: cover;
 		background-attachment: fixed;
 		
+
 	}
-	#ubermich h2{
+	.übermich h2{/*titel*/
+		padding-top: 50px;
+		margin: 0;
+		color: #E2E2E2;
+		font-family: 'Black Han Sans', sans-serif;
 		font-size: 40px;
-		font-weight: 500;
-		letter-spacing: 5px;
-
+		text-shadow: 5px 5px 10px black;
 	}
-
-	/*Avatar Bild*/
-	#avatar{
-		width: 20%;
-		height: auto;
-		margin-left:  40%;
+	hr{/*Unterstrich*/
+		margin: 0 300px 40px 300px;
 	}
-
-	#avatar img{
+	.biografie{/*Text über mich und bild*/
+		display: flex;
+		margin-left: 20%;
+		margin-right: 20%;
+		padding: 40px 30px;
+		border-radius: 30px;
+		box-shadow: 10px 10px 20px black;
+		background-image: url(bilder/hintergrund-übermich-text.png);
+		background-size: cover;
+		background-repeat: none;
+	}
+	.avatar{/*Bild*/
+		flex:1;
 		width: 100%;
-		height: 100%;
-
-
-	}
-	/*Über Mich Text*/
-
-	#ubermich p{
-		display: block;
-		margin-top: 20px;
-		width: 60%;
 		height: auto;
-		border-left: solid black 1px;
-		border-right: solid black 1px;
+		margin-right: 100px;
+
+	}	
+	.avatar img{
+		max-width: 100%;
+		height: auto;
+		border-radius: 40px;
+	}
+	.übermich p{/*text*/
+		margin: 0;
+		flex:2;
+		font-family: 'Libre Baskerville', serif;
+		
 	}
 
-/*Gallerie Section 2*/
+	/*HandyBildschirm übermich Section*/
+		@media screen and (max-width: 600px){
+			.biografie{
+				display: block;
+				margin: 0;
+			}
+			.avatar{
+				
+				
+			}
+			.übermich p{
+				padding-top: 20px;
+			}
+		}
+
+
+
+
+
+
+	/*Meine Werkstatt*/
+	.meinewerkstatt{
+		margin-top: 200px;
+	}
+
+
+
+	#werkstatt-thumbnail{
+		width: 30%;
+		height: auto;
+		border-radius: 7px;
+		cursor: pointer;
+		transition: 0.3s ease;
+		box-shadow: 10px 10px 20px black;
+	}
+	#werkstatt-thumbnail:hover{
+		width: 50%;
+		box-shadow: 15px 15px 30px black;
+	}
+ 	
+
+	
+
+/*Footer*/
+	footer{
+		width: 100%;
+		height: 200px;
+		background-color: black;
+		text-align: center;
+
+	}
+	footer ul{
+		list-style: none;
+		height: 80%;
+		padding:0;
+		margin: 0;
+	}
+	footer li{
+		padding: 15px 0;
+	}
+	footer a:hover{
+		background-color: #424242;
+	}
+
+	footer a{
+		text-decoration: none;
+		text-transform: none;
+		color: white;
+		padding: 15px 10px;
+	}
+
+
 
 	
 
