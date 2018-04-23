@@ -7,38 +7,56 @@
 	<meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Dani's Kunst</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.mi.css">
+	
 	<link rel="stylesheet" type="text/css" href="style-official.css">
+	<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Libre+Baskerville" rel="stylesheet">
 </head>
-	<header>
-			<span id="kleinsmenü">Menü</span>
-		<nav id="menü">
-			
-			<ul>
-				<li><a href="#">Über</a></li>
-				<li><a href="#">Gallerie</a></li>
-				<li><a href="#">Kontakt</a></li>
-				<li><a href="#">GUGus</a></li>
-			</ul>		
-		</nav>
-		
-		
+<!--header-->   
+    <header>  
+	    
+	   
 
+	<!--Wissi Schrift-->
 		<h1 id="danielmaurer">
 			<span>Daniel Maurer</span>
-			<p><a id="startknopf" href="#übermich">Start</a></p>
+			<p id="startknopf"><a href="#ubermich">Start</a></p>
 		</h1>
 		
+	<!--Hamburger-->
+		<div class="button_container" id="toggle">
+	        <span class="top"></span>
+	        <span class="middle"></span>
+	        <span class="bottom"></span>
+	    </div>
+	<!--Navigationsmenü-->	
+		<div class="overlay" id="overlay">
+	      	<nav class="overlay-menu">
+	        	<ul>
+	          		<li><a href="#">Home</a></li>
+	          		<li><a href="#">About</a></li>
+	          		<li><a href="#">Work</a></li>
+	      			<li><a href="#">Contact</a></li>
+	        	</ul>
+	     	</nav>
+	    </div>
 		
 	</header>
-		
-			<section id="übermich">
-				<h2>Über Mich</h2>
-				<hr>
-				<div id="avatar"><img src="bilder/avatar.png"></div>
-				<p class="container"> halo Schnisu sit amet, consectetur adipisicing elit. Voluptates modi ratione nostrum dolorum vel quas maiores, cumque odit enim maxime repudiandae autem, dolore reprehenderit voluptate? Magni vero, dolor harum facere. Pariatur recusandae itaque eligendi porro molestiae unde eaque harum quasi, possimus esse, optio nemo ipsam, accusantium facere tenetur officia! Necessitatibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum error autem ipsum? Maxime excepturi magnam cumque quia rem provident. Nisi illo doloribus consequatur ex numquam deserunt, velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus delectus consectetur rerum provident tempora cum, aliquam, fugit maiores dolore pariatur harum quidem unde assumenda repudiandae nulla id beatae saepe fuga.</p>
+<!--über Mich Section-->		
+	<section class="übermich">
+		<h2>ÜBER MICH</h2>
+		<hr>
+		<div class="biografie">
+			<div class="avatar">
+				<img src="bilder/Profilbild.jpg">
+			</div>
 
-			</section>
+			<p><strong>Lorem ipsum dolor sit amet,</strong> consectetur adipisicing elit. Cum laudantium iure sequi quam necessitatibus consectetur, dignissimos aperiam provident assumenda perspiciatis maxime fugit, nesciunt error, expedita doloremque voluptatem illo deleniti exercitationem deserunt vero maiores excepturi. Aliquid quasi laborum numquam vitae, possimus.
+			</p>	
+		</div>
+		<div class="meinewerkstatt">
+			<img id="werkstatt-thumbnail"src="bilder/hintergrund2.jpg">
+		</div>
+	</section>
 
 				
 
@@ -51,13 +69,15 @@
 
 
 
-
-
-
-
-
-
-
+<!--Footer-->
+	<footer>
+		<ul>
+			<li><a href="#">Kontakt</a></li>
+			<li><a href="#">Email</a></li>
+			<li><a href="#">Facebook</a></li>
+			<li><a href="#">No anders Züg</a></li>
+		</ul>
+	</footer>
 
 
 
@@ -68,7 +88,7 @@
 <body>
 	<!--Scripts-->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
 	<script src="functions-official.js"></script>	
 </body>
 </html>

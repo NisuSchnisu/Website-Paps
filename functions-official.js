@@ -1,6 +1,6 @@
 $("document").ready(function(){  
 /*scroll funktion*/
-  $(window).scroll(function(){
+  $(window).on("scroll", function(){
 
       var wScroll = $(this).scrollTop();
 
@@ -18,24 +18,30 @@ $("document").ready(function(){
 //Gallerie
       
 
-
+  });//end Scroll
       
-  });
+ 
 
  
 //Smooth Scrolle
 
-  $("#startknopf").click(function() {
+  $("#startknopf").on("click", function() {
     $('html,body').animate({
-      scrollTop: $("#übermich").offset().top},
+      scrollTop: $(".übermich").offset().top},
         'slow');
   });
 
 
-//Menü wenn screen klei
-  $('#kleinsmenü').click(function(){
-    $('#menü').slideToggle();
-  })//end click function
+//navmenü
+  $('#toggle').on("click", function() {
+    $(this).toggleClass('active');
+    $('#overlay').toggleClass('open');
+  });
+ 
+
+
+  
+  
 
 
 
